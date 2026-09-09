@@ -1,0 +1,158 @@
+/* 1. CONFIGURACIÓN DE VARIABLES Y COLORES DEL LOGO */
+:root {
+    --red: #f73b3b;
+    --background: #2c2c2c; 
+    --gray-shadow: #272727;
+    --text-main-color: #ffffff;
+    --text-second-color: #a3a3a3;
+}
+
+@font-face {
+  font-family: "sub_title";
+  src: url("fonts/Montserrat-VariableFont_wght.ttf") format('woff2');
+  font-weight: 1000;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "text";
+  src: url("fonts/IosevkaCharonMono-Regular.ttf") format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+body{
+    background-color: rgb(238, 240, 218);
+    font-family: "text";
+}
+
+div.main_layout{
+    background-color: #272727d5;
+    margin: 5% 10%;
+    border-radius:1rem;
+}
+
+
+
+header{
+    background-color: var(--gray-shadow);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border-radius: 1rem;
+}
+
+.logo{
+    width: 15rem;
+}
+
+nav{
+    display: flex;
+    gap: 2rem;
+    align-self: center;
+    justify-self: center;
+}
+
+nav a{
+    font-family: "sub_title";
+    color: var(--text-main-color);
+    text-decoration: none;
+    text-align: center;
+    
+    display: flex;
+    flex-direction:row;
+}
+
+
+.content{
+    margin: 1rem;
+    display: grid;
+    color: var(--text-second-color);
+}
+
+.intro{
+    display: flex;
+    flex-direction: column;
+    margin: 3% 30%;
+}
+
+.intro p{
+    font-family: "text";
+    font-size: 1.2rem;
+    margin-bottom: 0px;
+}
+
+.intro h1,h2{
+    font-family: "sub_title";
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.intro h1{
+    font-size: 3rem;
+}
+
+.intro h2{
+
+    font-size: 2rem;
+}
+
+.stats .title{
+    font-family: "sub_title";
+    color: var(--text-main-color);
+    align-items: center;
+    text-align: center;
+    transition: 0.5s ease;
+}
+
+.stats .title:hover{
+    color: var(--red);
+    
+}
+
+.stats{
+    display: flex;
+    flex-direction: column;
+}
+
+.stats .wrap{
+    display: flex;
+    gap: 1rem;
+    align-self: center;
+}
+
+
+
+.card{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    aspect-ratio: 1 / 1;
+    justify-content: center;
+    align-items: center;
+
+    
+}
+
+.card h2{
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 0 1rem;
+}
+
+.card h2 p{
+    font-family: "sub_title";
+    font-size: 2.5rem;
+}
+
+@media screen and (max-width: 700px){
+    .stats .wrap{
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+    }
+
+}
