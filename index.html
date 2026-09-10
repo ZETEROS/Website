@@ -5,15 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home | MZ</title>
     <link rel="stylesheet" href="style.css">
+    <script src="scroll.js" defer></script>
 </head>
 <body>
 
     <div class="main_layout">
 
         <header>
-            <img src="images/logo_no_background.png"alt="MZ Logo" class="logo">
-           
+            <!--<img src="images/logo_no_background.png"alt="MZ Logo" class="logo">-->
             <nav>
+                <a href="#home">HOME</a>
                 <a href="#machines">MACHINES</a>
                 <a href="#projects">PROJECTS</a>
                 <a href="#about_me">ABOUT ME</a>
@@ -22,62 +23,65 @@
 
         <main class="content">
             <section class="intro">
-                <p>Hi, my name is</p><br><h1><span class="capital_letter">M</span>ohamed <span class="capital_letter">Z</span>ahrani</h1><br><h2>and this is my <span>portfolio</span>.</h2><br><p>I am currently a computer engineering student at CY Tech, 
-                    and this is my portfolio, where I document all my progress in <span>cybersecurity</span> and <span>programming</span>.</p>
+                <p class="todo">Hi, my name is</p><br><h1 class="todo"><span class="capital_letter">M</span>ohamed <span class="capital_letter">Z</span>ahrani</h1><br><h2 class="todo">and this is my <span>portfolio</span>.</h2><br><p class="todo">Building <span>projects</span>, learning <span>cybersecurity</span> and exploring systems through code.</p>
+            </section>
+            <section class="CTA">
+                
             </section>
             
-            <section class="stats">
-                <h1 class="title">SOME STATS</h1>
+            <section class="section">
+                <h1 class="title todo">CURRENT STATS</h1>
 
                 <div class="wrap">
-                    <div class="card" id="projects">
+                    <div class="card todo" id="projects">
                         <h2>PROJECTS</h2><span>3</span>
                         
                     </div>
-                    <div class="card" id="machines">
-                        <h2>MACHINES DONE</h2><span>4</span>
+                    <div class="card todo" id="machines">
+                        <h2>CTF / LABS</h2><span>4</span>
                         
                     </div>
-                    <div class="card" id="determination">
-                        <h2>DETERMINATION</h2><span>∞</span>
+                    <div class="card todo" id="determination">
+                        <h2>CURIOSITY</h2><span>∞</span>
                         
                     </div>
                 </div>
             </section>
+            
 
-            <section class="stats">
-                <h1 class="title">SOME SKILLS</h1>
+            <section class="section">
+                <h1 class="title todo">SOME SKILLS</h1>
 
                 <div class="wrap">
-                    <div class="card" id="pythonbash">
+                    <div class="card todo" id="pythonbash">
                         <h2>PYTHON & BASH</h2><img alt="Python logo" src="images/python.png" class="symbol">
-                        
+                        <h3>Automation · Scripting · Tools</h3>
                     </div>
-                    <div class="card" id="c">
-                        <h2>C PROGRAMMING</h2><img alt="C logo" src="images/C_Programming_Language.svg.webp" class="symbol">
-                        
+                    <div class="card todo" id="c">
+                        <h2>C PROGRAMMING</h2><img alt="C logo" src="images/C_Programming_Language.png" class="symbol">
+                        <h3>Systems · Memory · SDL2</h3>
                     </div>
-                    <div class="card" id="frontend">
+                    <div class="card todo" id="frontend">
                         <h2>FRONTEND DEV</h2><img alt="Frontend logo" src="images/frontend.png" class="symbol">
-                        
+                        <h3>HTML · CSS · JS </h3>
                     </div>
-                    <div class="card" id="backend">
+                    <div class="card todo" id="backend">
                         <h2>PHP</h2><img alt="php logo" src="images/php.png" class="symbol">
-                        
+                        <h3>Basic PHP</h3>
                     </div>
-                    <div class="card" id="linux">
-                        <h2>LINUX CLI</h2><img alt="linux logo" src="images/Linux-Logo.wine.svg" class="symbol">
-                        
+                    <div class="card todo" id="linux">
+                        <h2>LINUX CLI</h2><img alt="linux logo" src="images/Linux-Logo.png" class="symbol">
+                        <h3>CLI · Bash · Administration</h3>
                     </div>
-                    <div class="card" id="ctflabs">
+                    <div class="card todo" id="ctflabs">
                         <h2>CTF & LABS</h2><img alt="Hack The Box logo" src="images/hackthebox.png" class="symbol">
-                        
+                        <h3>CTFs · Enumeration · Web Security</h3>
                     </div>
                 </div>
             </section>
 
-            <section class="more_soon">
-                <h3></h3>
+            <section class="section">
+                <h1 class="title more_to_come todo">I'M STILL STUDYING, SO THERE WILL BE MORE TO COME IN THE FUTURE</h1>
             </section>
 
         </main>

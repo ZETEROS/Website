@@ -1,10 +1,13 @@
 /* 1. CONFIGURACIÓN DE VARIABLES Y COLORES DEL LOGO */
 :root {
     --red: #f73b3b;
-    --background: #2c2c2c; 
+    --dark-blue: #031b70;
+    --background-color: #3F1A1A; 
+    --main_layout_color: #75B6AB;
     --gray-shadow: #272727;
-    --text-main-color: #ffffff;
-    --text-second-color: #a3a3a3;
+    --text-main-color: white;
+    --text-main-contrast: ;
+    --text-second-color: white;
 }
 
 @font-face {
@@ -23,79 +26,109 @@
 
 
 body{
-    background-color: rgb(238, 240, 218);
+    background-color: var(--background-color);
     font-family: "text";
     justify-content: center;
+    margin: 0;
 }
 
 div.main_layout{
-    background-color: #272727d5;
-    margin: 5% 10%;
-    border-radius:1rem;
+    background-image: url("images/background\ v2.png");/*linear-gradient(rgba(0, 0, 0, 0.733), rgba(0, 0, 0, 0.705)), url("images/background\ v2.png");*/
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.733);
+    position: relative;
+    margin: 0;
 }
 
 
 
 header{
-    background-color: var(--gray-shadow);
+    background-color: transparent;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    border-radius: 1rem;
-    max-height: 200px;
+    justify-content: center;
+    
+    max-height: 100px;
+    overflow: hidden;
+    position: sticky;
+    top: 0;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.13);
 }
 
+
 .logo{
-    width: 15rem;
+    opacity: 0;
+    height: 200px;
+    position: absolute;
+    top:-5vh;
+    right: 0vh;
     
     
 }
 
 nav{
+
     display: flex;
     gap: 2rem;
-    align-self: center;
     justify-self: center;
-    padding: 0 5%;
+    padding: 1.8% 3%;
+    justify-self: center;
+    /*background: linear-gradient(rgba(255, 255, 255, 0.055), rgba(255, 255, 255, 0.082));
+    border-radius: 1000px;*/
+    
 }
 
 nav a{
     font-family: "sub_title";
-    color: var(--text-main-color);
+    color: var(--dark-blue);
     text-decoration: none;
     text-align: center;
-    border-bottom: 2px solid var(--red);
+    padding: 0px 4px 5px 10px;
+    
+    border-bottom: 2px solid white;
+    border-left: 10px solid white;
     transition: 0.5s ease;
     display: flex;
     flex-direction:row;
 }
 
 nav a:hover{
-    color: var(--red);
+    color: white;
     border-bottom: 2px solid var(--text-main-color);
+    border-left: 0px solid white;
+    padding: 0px;
 }
 
 
 .content{
-    margin: 1rem;
     display: flex;
     flex-direction: column;
     color: var(--text-second-color);
     justify-content: center;
-    gap: 7rem;
+    gap: 10rem;
+    padding-top: 5rem;
 }
 
 .intro{
     display: flex;
     flex-direction: column;
     text-align: left;
-    align-self: center;
-    max-width: 700px;
+    align-self: left;
+    max-width: 1200px;
+    aspect-ratio: 2 / 1;
+    padding: 0 2%;
+    margin-top: 2rem;
+    background: linear-gradient(rgba(255, 255, 255, 0.01), rgba(255, 255, 255, 0.012));
+    transition: 0.5s ease ;
 }
+
 
 .intro p{
     font-family: "text";
-    font-size: 1.2rem;
+    font-size: 1.6rem;
     margin-bottom: 0px;
 }
 
@@ -106,12 +139,12 @@ nav a:hover{
 }
 
 .intro h1{
-    font-size: 3rem;
+    font-size: 6rem;
     color: var(--text-main-color);
 }
 
 .intro span.capital_letter{
-    color: var(--red);
+    color: var(--dark-blue);
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke: 2px;
     transition: 0.5s ease;
@@ -126,48 +159,48 @@ nav a:hover{
 
 .intro h2{
 
-    font-size: 2rem;
+    font-size: 4rem;
 }
 
 .intro h2 span{
-    border-bottom: 2px solid var(--red);
+    border-bottom: 4px solid var(--dark-blue);
 }
 
 .intro p span{
-    border-bottom: 2px solid var(--red);
+    border-bottom: 4px solid var(--dark-blue);
 }
 
-.stats .title{
+.section .title{
     font-family: "sub_title";
-    color: var(--text-main-color);
+    color: var(--dark-blue);
     align-items: center;
     text-align: center;
     transition: 0.5s ease;
 }
 
-.stats .title:hover{
-    color: var(--red);
+.section .title:hover{
+    color: white;
     
 }
 
-.stats{
+.section{
     display: flex;
     flex-direction: column;
 }
 
-.stats .wrap{
+.section .wrap{
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
     align-self: center;
     justify-content: center;
-    max-width: 650px;
+    max-width: 1000px;
     border: 2px rgba(252, 255, 215, 0.836);
 }
 
 
 
-.card{
+section.section div.wrap div.card{
     
     display: flex;
     flex-direction: column;
@@ -177,18 +210,28 @@ nav a:hover{
     aspect-ratio: 1 / 1;
     justify-content: center;
     align-items: center;
-    border-style: solid;
-    box-shadow: 0 5px 10px #272727;
-    border-color: var(--gray-shadow);
-    border-width: 5px;
-
+    background: linear-gradient(rgba(255, 255, 255, 0.041), rgba(255, 255, 255, 0.123));
+    box-shadow: 0 5px 5px #272727;
+    transition: 0.5s ease;
+    border: 1px solid white;
     
+}
+
+
+.card:hover{
+    transform: translateY(-10px);
 }
 
 .card h2{
     text-align: center;
     font-size: 1.5rem;
     padding: 0 1rem;
+}
+
+.card h3{
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 500;
 }
 
 .card span{
@@ -208,11 +251,17 @@ nav a:hover{
 }
 
 
+
+
 .card img.symbol{
     
     max-height: 100px;
 }
 
+
+.section h1.more_to_come{
+    color: rgb(161, 161, 161);
+}
 
 
 @media screen and (max-width: 700px){
@@ -222,4 +271,13 @@ nav a:hover{
         align-self: center;
     }
 
+}
+
+.todo {
+    opacity: 0;
+    transition: 2.5s ease;
+}
+
+.todo.show{
+    opacity: 1;
 }
