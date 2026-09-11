@@ -1,7 +1,9 @@
 /* 1. CONFIGURACIÓN DE VARIABLES Y COLORES DEL LOGO */
 :root {
     --red: #f73b3b;
+    --red-background: #cb0043;
     --dark-blue: #031b70;
+    --light-blue: #42cbde;
     --background-color: #3F1A1A; 
     --main_layout_color: #75B6AB;
     --gray-shadow: #272727;
@@ -33,15 +35,41 @@ body{
 }
 
 div.main_layout{
-    background-image: url("images/background\ v2.png");/*linear-gradient(rgba(0, 0, 0, 0.733), rgba(0, 0, 0, 0.705)), url("images/background\ v2.png");*/
+    background-color: var(--red-background);
+    
+    /*background-image: url("images/background\ v2.png");/*linear-gradient(rgba(0, 0, 0, 0.733), rgba(0, 0, 0, 0.705)), url("images/background\ v2.png");*/
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.733);
     position: relative;
     margin: 0;
+    z-index: 0;
+    max-width: 1920px;
 }
 
+div.runner{
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 950px;
+    z-index: -1;
+}
+
+div.runner img{
+    height: 100%;
+}
+
+div.old_man{
+    position: absolute;
+    left: 0;
+    top: 950px;
+    height: 500px;
+    z-index: -1;
+}
+div.old_man{
+    height: 100%;
+}
 
 
 header{
@@ -51,11 +79,23 @@ header{
     justify-content: center;
     
     max-height: 100px;
-    overflow: hidden;
+    
     position: sticky;
     top: 0;
-
+    transition: background-color 0.3s;
     border-bottom: 1px solid rgba(255, 255, 255, 0.13);
+    z-index: 1;
+}
+
+header.scrolled {
+    background-color: var(--dark-blue);
+}
+
+header.scrolled nav a{
+    color: var(--red-background);
+}
+header.scrolled nav a:hover{
+    color: white;
 }
 
 
@@ -164,7 +204,7 @@ nav a:hover{
     color: var(--dark-blue);
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke: 2px;
-    animation: blink-color 1s alternate infinite ;
+    /*animation: blink-color 1s alternate infinite ;*/
 
 }
 
@@ -205,7 +245,7 @@ section.CTA a{
     border: 2px solid var(--dark-blue);
     padding-top: 1rem;
     padding-bottom: 1rem;
-    transition: color 0s ease;
+    
 }
 
 section.CTA a.terminal-command:hover{
@@ -254,6 +294,8 @@ section.CTA a span.cursor{
     flex-direction: column;
 }
 
+
+
 .section .wrap{
     display: flex;
     flex-wrap: wrap;
@@ -264,7 +306,12 @@ section.CTA a span.cursor{
     border: 2px rgba(252, 255, 215, 0.836);
 }
 
-
+section.section.stats,
+section.section.skills {
+    align-self: flex-end;
+    margin-right: 2%;
+    width: 1000px;
+}
 
 section.section div.wrap div.card{
     
@@ -276,8 +323,8 @@ section.section div.wrap div.card{
     aspect-ratio: 1 / 1;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(rgba(255, 255, 255, 0.041), rgba(255, 255, 255, 0.123));
-    box-shadow: 0 5px 5px #272727;
+    background: rgba(0, 0, 0, 0.247);/*linear-gradient(180deg, rgba(3, 27, 112, 0.671), rgba(66, 204, 222, 0.5));
+    */box-shadow: 0 5px 5px #272727;
     transition: 0.5s ease;
     border: 1px solid white;
     
@@ -286,6 +333,7 @@ section.section div.wrap div.card{
 
 .card:hover{
     transform: translateY(-10px);
+    border-radius: 2rem;
 }
 
 .card h2{
@@ -304,9 +352,9 @@ section.section div.wrap div.card{
     margin-top: 1rem;
     font-family: "sub_title";
     font-size: 4rem;
-    color: var(--red);
-    -webkit-text-fill-color: transparent;
-    -webkit-text-stroke: 2px;
+    color: white;
+    /*-webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 2px;*/
     transition: 0.5s ease;
 }
 
@@ -326,7 +374,7 @@ section.section div.wrap div.card{
 
 
 .section h1.more_to_come{
-    color: rgb(161, 161, 161);
+    color: var(--dark-blue);
 }
 
 
@@ -341,7 +389,7 @@ section.section div.wrap div.card{
 
 .todo {
     opacity: 0;
-    transition: opacity 1.5s ease, color 0.2s ease;
+    transition: opacity 1.5s , color 0.2s ;
 }
 
 .todo.show{
