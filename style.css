@@ -118,10 +118,12 @@ nav a:hover{
     text-align: left;
     align-self: left;
     max-width: 1200px;
-    aspect-ratio: 2 / 1;
+    
     padding: 0 2%;
     margin-top: 2rem;
-    background: linear-gradient(rgba(255, 255, 255, 0.01), rgba(255, 255, 255, 0.012));
+    margin-bottom: 0;
+    /*background: linear-gradient(rgba(255, 255, 255, 0.01), rgba(255, 255, 255, 0.012));
+    */
     transition: 0.5s ease ;
 }
 
@@ -143,13 +145,30 @@ nav a:hover{
     color: var(--text-main-color);
 }
 
+@keyframes blink-color{
+    25%{
+        opacity: 75%;
+    }
+    50%{
+        opacity: 50%;
+    }
+    75%{
+        opacity: 25%;
+    }
+    100%{
+        opacity: 0%;
+    }
+}
+
 .intro span.capital_letter{
     color: var(--dark-blue);
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke: 2px;
-    transition: 0.5s ease;
+    animation: blink-color 1s alternate infinite ;
 
 }
+
+
 
 .intro span.capital_letter:hover{
     color: var(--text-main-color);
@@ -169,6 +188,53 @@ nav a:hover{
 .intro p span{
     border-bottom: 4px solid var(--dark-blue);
 }
+
+section.CTA{
+    display: flex;
+    flex-direction: row;
+    
+    padding: 0 2%;
+    
+}
+
+section.CTA a{
+    text-decoration: none;
+    font-family: "text";
+    font-size: 1.5rem;
+    color: white;
+    border: 2px solid var(--dark-blue);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    transition: color 0s ease;
+}
+
+section.CTA a.terminal-command:hover{
+    color: rgba(255, 255, 255, 0.466);
+}
+
+section.CTA a.pwned-machines{
+    
+    padding-right: 150px;
+    padding-left: 25px;
+}
+
+section.CTA a.projects{
+    padding-right: 250px;
+    padding-left: 25px;
+    
+}
+
+@keyframes blink{
+    50%{
+        opacity: 0;
+    }
+}
+
+section.CTA a span.cursor{
+    width: 10px;
+    animation: blink 1s step-end infinite;
+}
+
 
 .section .title{
     font-family: "sub_title";
@@ -275,7 +341,7 @@ section.section div.wrap div.card{
 
 .todo {
     opacity: 0;
-    transition: 2.5s ease;
+    transition: opacity 1.5s ease, color 0.2s ease;
 }
 
 .todo.show{
