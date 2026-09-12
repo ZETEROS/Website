@@ -32,6 +32,7 @@ body{
     font-family: "text";
     justify-content: center;
     margin: 0;
+    
 }
 
 div.main_layout{
@@ -46,6 +47,11 @@ div.main_layout{
     margin: 0;
     z-index: 0;
     max-width: 1920px;
+    
+}
+
+div.characters{
+    overflow-x: hidden;
 }
 
 div.runner{
@@ -60,11 +66,26 @@ div.runner img{
     height: 100%;
 }
 
+.runner img.enter {
+    animation: enter-from-right 1s ease-out forwards;
+}
+
+@keyframes enter-from-right {
+    from {
+        transform: translateX(300px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
 div.old_man{
     position: absolute;
     left: 0;
     top: 950px;
-    height: 500px;
+    height: 350px;
     z-index: -1;
 }
 div.old_man{
