@@ -1,0 +1,57 @@
+
+main.content{
+  color: white;
+  font-family: "text";
+  display: flex;
+  flex-direction: column;
+  padding: 5rem 5rem;
+}
+
+.title{
+  font-family: "sub_title";
+  justify-self: center;
+  text-align: center;
+  color: white;
+  font-size: 2rem;
+  
+}
+
+
+div.machine{
+  display: flex;
+  height: 5rem;
+
+  justify-content: space-between;
+  background: white;
+  color: var(--red-background);
+  padding: 1rem;
+  font-size: 100%;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  font-family: "text";
+  transition: transform 0.5s ease;
+}
+
+div.machine:hover{
+  transform: scale(1.01);
+}
+
+div.machine img.host-platform{
+  height: 125%;
+}
+
+
+section.section{
+  background: rgba(0, 0, 0, 0.164);
+  border-radius: 0.5rem;
+  
+  padding: 3%;
+}
+
+section.explanation{
+  font-family: "text";
+  font-size: 1.3rem;
+  max-width: 1000px;
+  align-self: center;
+  text-align: center;
+}

@@ -1,0 +1,110 @@
+:root {
+    --red: #f73b3b;
+    --red-background: #cb0043;
+    --dark-blue: #031b70;
+    --light-blue: #42cbde;
+    --background-color: #3F1A1A; 
+    --main_layout_color: #75B6AB;
+    --gray-shadow: #272727;
+    --text-main-color: white;
+    --text-main-contrast: ;
+    --text-second-color: white;
+}
+
+@font-face {
+  font-family: "sub_title";
+  src: url("../fonts/Montserrat-VariableFont_wght.ttf") format('woff2');
+  font-weight: 1000;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "text";
+  src: url("../fonts/IosevkaCharonMono-Regular.ttf") format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+body{
+    background-color: var(--red-background);
+    font-family: "text";
+    justify-content: center;
+    margin: 0;
+    
+}
+
+div.main_layout{
+    background-color: var(--red-background);
+    
+    /*background-image: url("images/background\ v2.png");/*linear-gradient(rgba(0, 0, 0, 0.733), rgba(0, 0, 0, 0.705)), url("images/background\ v2.png");*/
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
+    position: relative;
+    margin: 0;
+    z-index: 0;
+    max-width: 1920px;
+    overflow: hidden;
+}
+
+header{
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+    max-height: 100px;
+    
+    position: sticky;
+    top: 0;
+    transition: background-color 0.3s;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.13);
+    z-index: 1;
+}
+
+header.scrolled {
+    background-color: var(--dark-blue);
+}
+
+header.scrolled nav a{
+    color: var(--red-background);
+}
+header.scrolled nav a:hover{
+    color: white;
+}
+
+nav{
+
+    display: flex;
+    gap: 2rem;
+    justify-self: center;
+    padding: 1.8% 3%;
+    justify-self: center;
+    /*background: linear-gradient(rgba(255, 255, 255, 0.055), rgba(255, 255, 255, 0.082));
+    border-radius: 1000px;*/
+    
+}
+
+nav a{
+    font-family: "sub_title";
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    padding: 0px 4px 5px 10px;
+    
+    border-bottom: 2px solid var(--dark-blue);
+    border-left: 10px solid var(--dark-blue);
+    border-radius: 0.1rem;
+    transition: 0.5s ease;
+    display: flex;
+    flex-direction:row;
+}
+
+nav a:hover{
+    color: white;
+    border-bottom: 2px solid var(--text-main-color);
+    border-left: 0px solid white;
+    padding: 0px;
+}
