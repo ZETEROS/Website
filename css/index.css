@@ -297,15 +297,41 @@ section.section div.wrap div.card{
 }
 
 
-@media screen and (max-width: 700px){
-    .stats .wrap{
+@media screen and (max-width: 800px){
+    .stats .wrap, .skills .wrap{
         display: flex;
         flex-direction: column;
+        align-self: center;
+    }
+    section.CTA{
+        
         align-self: center;
     }
 
 }
 
+@media screen and (max-width: 1570px){
+    div.runner,div.old_man{
+        opacity: 0;
+    }
+    section.section.stats,
+    section.section.skills {
+        align-self: center;
+        margin-right: 2%;
+        width: 1000px;
+    }
+}
+
+@media screen and (max-width: 1120px){
+    section.CTA{
+        flex-direction: column;
+        gap: 0.2rem;
+        max-width: 600px;
+    }
+    section.CTA a{
+        font-size: 1.2rem;
+    }
+}
 .todo {
     opacity: 0;
     transition: opacity 1.5s , color 0.2s ;
