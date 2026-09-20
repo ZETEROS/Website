@@ -32,6 +32,12 @@ div.machine{
   transition: transform 0.5s ease;
 }
 
+div.wrap{
+  display: flex;
+  flex-direction:column ;
+  gap: 1rem;
+}
+
 div.machine:hover{
   transform: scale(1.01);
 }

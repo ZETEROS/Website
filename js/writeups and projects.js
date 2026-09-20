@@ -1,10 +1,9 @@
 
-picture = document.querySelector("img.picture")
 
-
-picture.classList.add("enter");
-picture.addEventListener("animationend", () => {
-    picture.classList.remove("enter");
+document.querySelectorAll(".machine").forEach(machine => {
+    machine.addEventListener("click", () => {
+        window.location.href = machine.dataset.href;
+    });
 });
 
 
@@ -27,12 +26,12 @@ async function escribirNodos(origen, destino, velocidad) {
   }
 }
 
-async function typeWriter(el, velocidad = 10) {
+async function typeWriter(el, velocidad = 20) {
   const original = el.cloneNode(true);
   el.innerHTML = "";
   await escribirNodos(original, el, velocidad);
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  typeWriter(document.getElementById("texto"));
+  typeWriter(document.getElementById("p1"));
 });
